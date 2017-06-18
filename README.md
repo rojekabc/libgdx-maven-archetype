@@ -150,4 +150,4 @@ Much of this archetype was adapted from [PlayN's archetype].
 ### Bazomatic Fork Notes
 v1.0.0.0 (June 18 2017)
 </br>
-    * Cloned existing branch
+  * Cloned existing branch
