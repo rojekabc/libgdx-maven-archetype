@@ -11,52 +11,57 @@
 	<properties>
 		<android.version>4.1.1.4</android.version>
 		<android.maven.version>3.8.1</android.maven.version>
+		<ashley.version>1.7.0</ashley.version>
 		<gwt.version>2.6.0</gwt.version>
 		<gwt.maven.version>2.6.0</gwt.maven.version>
+		<libgdx.version>1.9.4</libgdx.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<!-- core dependencies -->
+			<!-- Ashley dependencies -->
+			<dependency>
+				<groupId>com.badlogicgames.ashley</groupId>
+				<artifactId>ashley</artifactId>
+				<version>${ashley.version}</version>
+			</dependency>
+
+			<!-- LibGDX core dependencies -->
 			<dependency>
 				<groupId>com.badlogicgames.gdx</groupId>
 				<artifactId>gdx</artifactId>
-				<version>${project.version}</version>
+				<version>${libgdx.version}</version>
 			</dependency>
 
 			<!-- android-specific dependencies -->
 			<dependency>
 				<groupId>com.badlogicgames.gdx</groupId>
 				<artifactId>gdx-backend-android</artifactId>
-				<version>${project.version}</version>
+				<version>${libgdx.version}</version>
 			</dependency>
-
 			<dependency>
 				<groupId>com.badlogicgames.gdx</groupId>
 				<artifactId>gdx-platform</artifactId>
-				<version>${project.version}</version>
+				<version>${libgdx.version}</version>
 				<classifier>natives-armeabi</classifier>
 				<scope>provided</scope>
 			</dependency>
-
 
 			<!-- desktop-specific dependencies -->
 			<dependency>
 				<groupId>com.badlogicgames.gdx</groupId>
 				<artifactId>gdx-backend-lwjgl</artifactId>
-				<version>${project.version}</version>
+				<version>${libgdx.version}</version>
 			</dependency>
-
 			<dependency>
 				<groupId>com.badlogicgames.gdx</groupId>
 				<artifactId>gdx-platform</artifactId>
-				<version>${project.version}</version>
+				<version>${libgdx.version}</version>
 				<classifier>natives-desktop</classifier>
 			</dependency>
-
 			<dependency>
 				<groupId>com.badlogicgames.gdx</groupId>
 				<artifactId>gdx-platform</artifactId>
-				<version>${project.version}</version>
+				<version>${libgdx.version}</version>
 				<classifier>natives-armeabi-v7a</classifier>
 				<scope>provided</scope>
 			</dependency>
@@ -65,15 +70,14 @@
 			<dependency>
 				<groupId>com.badlogicgames.gdx</groupId>
 				<artifactId>gdx</artifactId>
-				<version>${project.version}</version>
+				<version>${libgdx.version}</version>
 				<classifier>sources</classifier>
 				<scope>provided</scope>
 			</dependency>
-
 			<dependency>
 				<groupId>com.badlogicgames.gdx</groupId>
 				<artifactId>gdx-backend-gwt</artifactId>
-				<version>${project.version}</version>
+				<version>${libgdx.version}</version>
 				<classifier>sources</classifier>
 				<scope>provided</scope>
 			</dependency>
@@ -89,11 +93,10 @@
 			<dependency>
 				<groupId>com.badlogic.gdx</groupId>
 				<artifactId>gdx-backend-ios</artifactId>
-				<version>${project.version}</version>
+				<version>${libgdx.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 
 	<repositories>
 		<repository>
